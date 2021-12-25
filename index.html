@@ -1,233 +1,82 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Portfolio" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      src="https://kit.fontawesome.com/fa62c117c7.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="styles.css" />
-    <title> - Z E N - </title>
+    <!-- Page setup -->
+    <meta charset="utf-8">
+    <title>ZENIXAS</title>
+    <meta name="description" content="A brief description of your site for search engines">
+    <meta name="author" content="Information about the author here">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+	<script src="https://kit.fontawesome.com/66439eee2c.js" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>        
   </head>
-  <body class="light" id="top">
-    <header class="header center">
-      <h3>
-        <a href="#" class="link"
-          >ZEN</a
-        >
-      </h3>
+  
+  <body>
 
-      <nav class="nav center">
-        <ul class="nav__list center">
-          <li class="nav__list-item">
-            <a class="link link--nav" href="#projects">Projects</a>
-          </li>
-          <li class="nav__list-item">
-            <a class="link link--nav" href="#skills">Skills</a>
-          </li>
-          <li class="nav__list-item">
-            <a class="link link--nav" href="#contact">Contact</a>
-          </li>
-        </ul>
-
-        <button type="button" aria-label="toggle theme" class="btn btn--icon">
-          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
-        </button>
-
-        <button
-          type="button"
-          aria-label="toggle navigation"
-          class="btn btn--icon nav__hamburger"
-        >
-          <i aria-hidden="true" class="fas fa-bars"></i>
-        </button>
-      </nav>
+    <header id="header">
+	<center>
+	<!--  different animated effects can be found on https://animate.style --> 
+      <img class="animate__animated animate__tada animate__slower	1s animate__infinite	infinite" src="assets/images/logo.png">
+      <h1>ZENIXAS</h1>
+	</center>
+            <!-- Menu link fragment #id should match a div id. Example: <a href="#home"> links to <div id="home"></div>  -->
+      <ul class="main-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>                 
     </header>
-
-    <main>
-      <!-- About -->
-      <div class="about center">
-        <h1>Hi, I am <span class="about__name">Zenix.</span></h1>
-        <h2 class="about__role">A Young Developer From Lithuania.</h2>
-        <p class="about__desc">
-          Currently still in highschool -_-
-        </p>
-
-        <div class="about__contact center">
-          <!-- <a href=" no resume :( ">
-            <span class="btn btn--outline">Resume</span>
-          </a> -->
-
-          <a
-            href="https://github.com/zenixas"
-            aria-label="github"
-            class="link link--icon"
-          >
-            <i aria-hidden="true" class="fab fa-github"></i>
-          </a>
-
-          <!-- <a
-            href=" no linkedin :("
-            aria-label="linkedin"
-            class="link link--icon"
-          >
-            <i aria-hidden="true" class="fab fa-linkedin"></i>
-          </a> -->
-        </div>
-      </div>
-
-      <!-- Projects -->
-      <section id="projects" class="section projects">
-        <h2 class="section__title">Projects</h2>
-
-        <div class="projects__grid">
-          <div class="project">
-            <h3>NET Renamer</h3>
-            <p class="project__description">
-                Simple tool to obfuscate/rename .NET module's methods, fields, classes and more using AsmResolver.<br>
-                (open sourced).
+   
+    <div id="container">
+      <div class="inner">
+        <div id="content"> 
+          
+          <div id="home" class="content-region hide">
+            <h2>Home</h2>
+            <p>
+              I'm a young developer from Lithuania. I'm currently still learning and developing my skills by working on various public and private projects. 
+              <br>
+                <br>
+                I have experience working with C, C++, C#, GIT.
+              </br>
+            </br>
             </p>
-            <ul class="project__stack">
-              <li class="project__stack-item">C#</li>
-            </ul>
-
-            <a
-              href="https://github.com/Zenixas/NetRenamer"
-              aria-label="source code"
-              class="link link--icon"
-            >
-              <i aria-hidden="true" class="fab fa-github"></i>
-            </a>
-            <a
-              href="https://github.com/Zenixas/NetRenamer"
-              aria-label="live preview"
-              class="link link--icon"
-            >
-              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
-            </a>
-          </div>
-
-          <div class="project">
-            <h3>ZenFuscator</h3>
-            <p class="project__description">
-               Obfuscator To Protect .NET Assemblies From Being Reverse Engineered.<br>
-               (open sourced).
-            </p>
-            <ul class="project__stack">
-              <li class="project__stack-item">C#</li>
-            </ul>
-
-            <a
-              href="https://github.com/Zenixas/ZenFuscator"
-              aria-label="source code"
-              class="link link--icon"
-            >
-              <i aria-hidden="true" class="fab fa-github"></i>
-            </a>
-            <a
-              href="https://github.com/Zenixas/ZenFuscator"
-              aria-label="live preview"
-              class="link link--icon"
-            >
-              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
-            </a>
-          </div>
-
-          <div class="project">
-            <h3>ZMINER.XYZ</h3>
-            <p class="project__description">
-              CryptoCurrency Mining Simplified With An Easy To Understand User Friendly Interface. Using XMRIG. <br>
-              (not open sourced)
-            </p>
-            <ul class="project__stack">
-              <li class="project__stack-item">C#</li>
-              <li class="project__stack-item">C/C++</li>
-            </ul>
-              <ul class="project__stack">
-              <li class="project__stack-item">HTML</li>
-              <li class="project__stack-item">CSS</li>
-              <li class="project__stack-item">JAVASCRIPT</li>
-            </ul>
-
-            <a
-              href="https://www.zminer.xyz/"
-              aria-label="live preview"
-              class="link link--icon"
-            >
-              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
-            </a>
           </div>
           
-          <div class="project">
-            <h3>Nemesis AutoClicker</h3>
-            <p class="project__description">
-              Feature Rich External Autoclicker Developed For The Game Minecraft.<br>
-              (not open sourced).
-            </p>
-            <ul class="project__stack">
-              <li class="project__stack-item">C#</li>
-              
-              <li class="project__stack-item">C/C++</li>
-            </ul>
-
-            <a
-              href="https://www.youtube.com/watch?v=mD5arMZe6CU"
-              aria-label="source code"
-              class="link link--icon"
-            >
-              <i aria-hidden="true" class="fab fa-youtube"></i>
-            </a>
-            <a
-              href="https://www.youtube.com/watch?v=mD5arMZe6CU"
-              aria-label="live preview"
-              class="link link--icon"
-            >
-              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
-            </a>
+          <div id="projects" class="content-region hide">
+            <h2>My projects</h2>
+            <p>
+              <h3>2021</h3>
+				<a href="https://github.com/Zenixas/NetRenamer" target="_blank" >NET Renamer</a> - Tool to obfuscate/rename .NET module's methods, fields, classes and more. (open sourced) </a> <br><br>
+				<a href="https://github.com/Zenixas/ZenFuscator" target="_blank" >ZenFuscator</a> -  Obfuscator To Protect .NET Assemblies From Being Reverse Engineered. (open sourced) <br> <br>
+				<a href="https://www.zminer.xyz/" target="_blank" >ZMINER.XYZ</a> -  CryptoCurrency Mining Simplified With An Easy To Understand User Friendly Interface.<br> <br>
+				<a href="https://www.youtube.com/watch?v=mD5arMZe6CU" target="_blank" >Nemesis AutoClicker</a> -  Feature Rich External Autoclicker Developed For The Game Minecraft.<br> <br>
+      </p>
           </div>
+          
+          <div id="contact" class="content-region hide">
+            <h2>Contact</h2>
+            <p>
+				You can contact me through any of these platforms listed below.
+			</p>
+              <h1>
+				<a href="https://github.com/Zenixas/" target="_blank" style="color:#ef3d87; font-size: 2.1rem"> - Github</a> <br>
+			  </h1>
+            
+          </div>
+          
         </div>
-      </section>
-
-      <!-- Skills -->
-      <section class="section skills" id="skills">
-        <h2 class="section__title">Skills</h2>
-        <ul class="skills__list">
-          <li class="skills__list-item btn btn--plain">C#</li>
-          <li class="skills__list-item btn btn--plain">.NET</li>
-          <li class="skills__list-item btn btn--plain">C/C++</li>
-          <li class="skills__list-item btn btn--plain">Git</li>
-        </ul>
-      </section>
-
-      <!-- Contact -->
-      <section class="section contact center" id="contact">
-        <h2 class="section__title">Contact</h2>
-        <a href="Zenix:zenixas@protonmail.com">
-          <span class="btn btn--outline">Email me</span>
-        </a>
-      </section>
-    </main>
-
-    <footer class="footer">
-
-    </footer>
-
-    <div class="scroll-container">
-    <div class="scroll-top">
-      <a aria-label="Scroll up" href="#top">
-        <i aria-hidden="true" class="fas fa-arrow-up"></i>
-      </a>
-    </div>
+      </div>
     </div>
 
-    <script src="./script.js"></script>
+    
+    <!-- Load additional JS scripts here -->
+    <script type="text/javascript" src="assets/js/script.js"></script>
+
   </body>
 </html>
